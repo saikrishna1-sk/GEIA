@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEIA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background: #ffffff;
+      padding: 20px 40px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #b8860b;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #b8860b;
+    }
+
+    section {
+      background-color: #fdfaf4;
+      border: 1px solid #e2e2e2;
+      border-radius: 12px;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #1a1a1a;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .value-highlights {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .value-highlights div {
+      font-size: 1.1em;
+    }
+
+    .phygital .stats {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .phygital .stats p {
+      margin-bottom: 10px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .step h3 {
+      color: #b8860b;
+      margin-bottom: 5px;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #fdfaf4;
+      border-top: 1px solid #e2e2e2;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .footer-content h2 {
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      background: #fff;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      border: none;
+      background-color: #b8860b;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #a4750a;
+    }
+
+    .extras p {
+      font-style: italic;
+      margin-bottom: 15px;
+      color: #777;
+    }
+
+    .social-icons img {
+      margin: 0 10px;
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+      transition: transform 0.2s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    @media (min-width: 768px) {
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .value-highlights {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">GEIA</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#phygital">What Is Phygital</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>The Real World Is Your Next Marketing Channel.</h1>
+    <p>Geia turns everyday physical environments into smart, phygital media — where your brand can be seen, held, scanned, and remembered.</p>
+    <p>Geia helps brands escape the noise of digital advertising and connect where it matters most — in the physical world.</p>
+    <div class="value-highlights">
+      <div>⚡ Unskippable Brand Moments</div>
+      <div>🌍 Phygital Distribution Across Real Environments</div>
+      <div>📊 QR & Digital Integration for Trackable Engagement</div>
+      <div>🔐 Stealth Format — No One Else Will Know What You're Doing</div>
+    </div>
+  </section>
+
+  <section class="phygital" id="phygital">
+    <h2>What Is Phygital Media?</h2>
+    <p>Phygital means Physical + Digital — a powerful fusion that transforms everyday environments into interactive brand platforms.</p>
+    <p>Think beyond screens. Imagine your audience seeing your brand in hand, scanning a code, and engaging instantly — all without interruption.</p>
+    <h3>📊 Why Phygital Works:</h3>
+    <ul>
+      <li>✔ People trust what they touch</li>
+      <li>✔ Physical interaction = emotional memory</li>
+      <li>✔ QR and AR bridge the offline/online world</li>
+      <li>✔ Conversion happens at the moment of attention</li>
+    </ul>
+    <div class="stats">
+      <p>82% of consumers trust physical experiences more than digital ads</p>
+      <p>65% are more likely to scan a code on a product than click a banner</p>
+      <p>91% of digital ads are ignored — physical touchpoints cut through</p>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <h2>🛠️ From Idea to Impact in 4 Steps</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Step 1: Define Your Audience & Context</h3>
+        <p>Who do you want to reach? Where do they go? What do they feel?</p>
+      </div>
+      <div class="step">
+        <h3>Step 2: Craft Your Message</h3>
+        <p>We work with you to create a physical + digital brand moment designed for action.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3: Activate the Touchpoint</h3>
+        <p>We deploy it across curated real-world environments: cafes, colleges, gyms, events, more.</p>
+      </div>
+      <div class="step">
+        <h3>Step 4: Track Engagement & Performance</h3>
+        <p>See scans, clicks, reach, and conversion data — in real time.</p>
+      </div>
+    </div>
+    <p style="margin-top:30px;">Geia manages your phygital media end-to-end. You focus on your message. We handle distribution, placement, and measurable ROI.</p>
+  </section>
+
+  <section class="about" id="about">
+    <h2>🧬 Geia Is Not a Marketing Company. It’s a Medium.</h2>
+    <p>We believe in brand moments, not just impressions.</p>
+    <p>We believe the real world is your most underused asset.</p>
+    <p>And we believe that phygital is the next ad revolution.</p>
+    <p>Founded in stealth mode, Geia is redefining how, where, and why brands connect with people.  
+       We’re here to build the invisible infrastructure of tomorrow’s attention economy.</p>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-content">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="extras">
+        <p>"Guided by you, powered by us"</p>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733614.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.querySelector(".contact-form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = form.querySelector("input[type='text']").value.trim();
+        const email = form.querySelector("input[type='email']").value.trim();
+        const message = form.querySelector("textarea").value.trim();
+        if (!name || !email || !message) {
+          alert("Please fill in all fields.");
+          return;
+        }
+        alert(`Thank you, ${name}! Your message has been received.`);
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>
+c:\Users\PRASUNA\Documents\geia
