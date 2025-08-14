@@ -1,346 +1,200 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GEIA | Phygital Marketing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Portfolio - Sai Krishna</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
-    html, body {
-      height: 100%;
-      background: #121212;
-      color: #eee;
-      scroll-behavior: smooth;
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
-    a {
-      color: #ffd700;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #fff;
-    }
+
     header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
+      background-color: black;
+      text-align: center;
+      padding: 15px;
+      color: white;
       font-weight: 600;
-      letter-spacing: 2px;
-    }
-    .logo {
       font-size: 24px;
-      color: #ffd700;
-      font-weight: 800;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      color: #ffd700;
-      cursor: pointer;
-    }
-    nav {
-      display: flex;
-    }
+
     nav ul {
+      background-color: black;
+      color: white;
       display: flex;
-      gap: 30px;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
       list-style: none;
     }
 
-    main.page-bg {
-      padding-top: 100px;
-      padding-bottom: 20px;
+    nav ul li {
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    section {
+    nav ul li:hover,
+    nav ul li.active {
+      background-color: #444;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-section img {
+      border-radius: 50%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .content {
+      max-width: 600px;
       width: 100%;
-      padding: 70px 30px 60px 60px;
-      background: transparent;
     }
 
-    section h2 {
-      font-weight: 700;
-      color: #ffd700;
-      margin-bottom: 20px;
+    .card {
+      background-color: whitesmoke;
+      padding: 20px;
+      margin: 15px 0;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .hero-content {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .typing {
-      font-size: 1.5rem;
-      font-weight: 300;
-      color: #ffd700;
-      border-right: 3px solid #ffd700;
-      animation: blink-caret 0.75s step-end infinite;
-      display: inline-block;
-      white-space: normal;
-      word-break: break-word;
-      max-width: 90%;
-      margin: 0 auto;
-    }
-
-    @keyframes blink-caret {
-      0%, 100% { border-color: transparent; }
-      50% { border-color: #ffd700; }
-    }
-
-    #home {
-      position: relative;
-      overflow: hidden;
-      z-index: 0;
-    }
-
-    #home::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cdefs%3E%3CradialGradient id='r' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23ffd700' stop-opacity='0.05'/%3E%3Cstop offset='100%25' stop-color='%23000' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='90' fill='url(%23r)'/%3E%3C/svg%3E") repeat;
-      opacity: 0.1;
-      animation: moveWater 20s linear infinite;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    @keyframes moveWater {
-      0% { background-position: 0 0; }
-      100% { background-position: 400px 0; }
-    }
-
-    ul {
-      list-style: disc inside;
-      margin-bottom: 20px;
-    }
-
-    blockquote {
-      font-style: italic;
-      border-left: 4px solid #ffd700;
-      padding-left: 15px;
-      color: #ddd;
-      margin-bottom: 20px;
-    }
-
-    cite {
+    button.project-btn {
       display: block;
-      margin-top: 8px;
-      font-weight: 600;
-      color: #ffd700;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    button.project-btn:hover {
+      background-color: #555;
+    }
+
+    .project-details {
+      display: none;
+      margin-top: 5px;
+      padding: 10px;
+      background-color: #e2e2e2;
+      border-radius: 4px;
     }
 
     footer {
-      background: #111;
-      color: #ccc;
-      padding: 40px 20px;
+      background-color: black;
       text-align: center;
+      padding: 15px;
+      color: white;
+      font-weight: 600;
+      margin-top: 30px;
     }
 
-    .contact-form {
-      max-width: 400px;
-      margin: 0 auto 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        justify-content: center;
+      }
 
-    .contact-form input, .contact-form textarea {
-      padding: 12px;
-      border-radius: 6px;
-      border: none;
-      background: #333;
-      color: #eee;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      padding: 14px;
-      background-color: #ffd700;
-      border: none;
-      border-radius: 6px;
-      font-weight: 700;
-      cursor: pointer;
-      color: #111;
-    }
-
-    .contact-form button:hover {
-      background-color: #e6c200;
-    }
-
-    .social-icons a img {
-      width: 28px;
-      filter: brightness(0) invert(1);
-      margin: 0 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a img:hover {
-      transform: scale(1.2);
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .typing { font-size: 1.1rem; }
-      .menu-toggle { display: block; }
-      nav { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: #121212; flex-direction: column; padding: 20px; }
-      nav.show { display: flex; }
-      nav ul { flex-direction: column; gap: 15px; }
-      section {
-        padding: 50px 20px 50px 20px;
+      .profile-section {
+        margin-right: 40px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">GEIA</div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <nav id="nav-menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#phygital">What Is Phygital</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>Sai Krishna</header>
 
-  <main class="page-bg">
-    <section class="hero" id="home" data-aos="fade-up">
-      <div class="hero-content">
-        <h1>The Real World Is Your Next Marketing Channel.</h1>
-        <div class="typing" id="typing"></div>
-      </div>
-    </section>
+<nav>
+  <ul>
+    <li class="active">Home</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
 
-    <section class="phygital" id="phygital" data-aos="fade-right">
-      <h2>What Is Phygital Media?</h2>
-      <p>Phygital means Physical + Digital — a powerful fusion that transforms everyday environments into interactive brand platforms.</p>
-      <ul>
-        <li>✔ People trust what they touch</li>
-        <li>✔ Physical interaction = emotional memory</li>
-        <li>✔ QR and AR bridge the offline/online world</li>
-        <li>✔ Conversion happens at the moment of attention</li>
-      </ul>
-    </section>
+<div class="container">
+  <div class="profile-section">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.leRaZskYpTKA55a0St0tZgHaJa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sai Krishna">
+  </div>
 
-    <section class="how-it-works" id="how-it-works" data-aos="fade-up">
-      <h2>🛠️ From Idea to Impact in 4 Steps</h2>
-      <h3>Step 1: Define Your Audience & Context</h3>
-      <p>Who do you want to reach? Where do they go? What do they feel?</p>
-      <h3>Step 2: Craft Your Message</h3>
-      <p>We work with you to create a physical + digital brand moment designed for action.</p>
-      <h3>Step 3: Activate the Touchpoint</h3>
-      <p>We deploy it across curated real-world environments: cafes, colleges, gyms, events, more.</p>
-      <h3>Step 4: Track Engagement & Performance</h3>
-      <p>See scans, clicks, reach, and conversion data — in real time.</p>
-    </section>
-
-    <section class="about" id="about" data-aos="zoom-in">
-      <h2>🧬 Geia Is Not a Marketing Company. It’s a Medium.</h2>
-      <p>We believe in brand moments, not just impressions.</p>
-      <p>We believe the real world is your most underused asset.</p>
-      <p>And we believe that phygital is the next ad revolution.</p>
-    </section>
-
-    <section class="testimonials" data-aos="fade-up">
-      <h2>💬 What People Say</h2>
-      <blockquote data-aos="fade-right">
-        <p>"Geia helped us break through digital fatigue — our QR scan rate increased by 4x!"</p>
-        <cite>- Rahul, Brand Manager</cite>
-      </blockquote>
-      <blockquote data-aos="fade-left">
-        <p>"Finally, a marketing platform that blends real-world touch and digital power seamlessly."</p>
-        <cite>- Priya, Growth Strategist</cite>
-      </blockquote>
-    </section>
-  </main>
-
-  <footer id="contact" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>"Guided by you, powered by us"</p>
-    <div class="social-icons">
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" /></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733614.png" alt="Instagram" /></a>
+  <div class="content">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a passionate Machine Learning engineer, with skills to train models and deploy them into websites or transform them into apps.</p>
     </div>
-  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
+    <div class="card">
+      <h2>Projects</h2>
 
-    const typingTexts = [
-      "Geia turns everyday physical environments into smart, phygital media.",
-      "Where your brand can be seen, held, scanned, and remembered.",
-      "Escape the noise of digital ads and connect physically."
-    ];
-    let typingIndex = 0, charIndex = 0;
-    const typingElement = document.getElementById('typing');
-    const typingSpeed = 50, pauseBetween = 2000;
+      <button class="project-btn" onclick="toggleDetails('proj1')">Employee Salary Prediction</button>
+      <div id="proj1" class="project-details">
+        A machine learning project that predicts employee salaries using regression models based on employee data.
+      </div>
 
-    function type() {
-      if (charIndex < typingTexts[typingIndex].length) {
-        typingElement.textContent += typingTexts[typingIndex].charAt(charIndex++);
-        setTimeout(type, typingSpeed);
-      } else {
-        setTimeout(erase, pauseBetween);
-      }
-    }
+      <button class="project-btn" onclick="toggleDetails('proj2')">Emotion Detection</button>
+      <div id="proj2" class="project-details">
+        An application using OpenCV and Python to detect emotions by analyzing facial expressions in real-time.
+      </div>
 
-    function erase() {
-      if (charIndex > 0) {
-        typingElement.textContent = typingTexts[typingIndex].substring(0, --charIndex);
-        setTimeout(erase, typingSpeed / 2);
-      } else {
-        typingIndex = (typingIndex + 1) % typingTexts.length;
-        setTimeout(type, typingSpeed);
-      }
-    }
+      <button class="project-btn" onclick="toggleDetails('proj3')">Resume Analyzer</button>
+      <div id="proj3" class="project-details">
+        A full-stack project with Front-End (HTML, CSS, JS) and Back-End (Python) to parse resumes and analyze content automatically.
+      </div>
+    </div>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      if (typingTexts.length) type();
-    });
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <p>C</p>
+      <p>Java</p>
+      <p>Python</p>
+      <p>Front End Web Development</p>
+      <p>React JS</p>
+    </div>
 
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = this.querySelector("input[type='text']").value;
-      alert(`Thank you, ${name}! Your message has been received.`);
-      this.reset();
-    });
+    <div class="card">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology (B.Tech)</strong> - Computer Science Enginnering (Artificial Intlligence and Machine Learning)  </p>
+      <p>Madanapalle Institute of Technologies and Sciences</p>
+      <p>Graduation Year: 2027</p>
+      <p>CGPA: 8.84/10</p>
+    </div>
+  </div>
+</div>
 
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.toggle('show');
-    });
-  </script>
+<footer>&copy; 2025 All Rights Reserved</footer>
+
+<script>
+  function toggleDetails(id) {
+    const elem = document.getElementById(id);
+    elem.style.display = elem.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
 </body>
 </html>
